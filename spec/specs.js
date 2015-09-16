@@ -18,14 +18,15 @@ describe('Space', function() {
 describe('Board', function() {
   it("verifies that the board object is built as intended", function() {
     var testBoard = new Board();
-    testBoard.buildBoard();
-    expect(testBoard.spaces[2].xCoordinate).to.equal(3);
-    expect(testBoard.spaces[2].yCoordinate).to.equal(1);
+    expect(testBoard.spaces).to.eql([]);
+  });
+
+  describe('buildBoard', function() {
+    it("populates the new board with spaces", function() {
+      var testBoard = new Board();
+      testBoard.buildBoard();
+      expect(testBoard.spaces[2].xCoordinate).to.equal(3);
+      expect(testBoard.spaces[2].yCoordinate).to.equal(1);
+    });
   });
 });
-//
-// describe('', function() {
-//   it("", function() {
-//
-//   });
-// });
